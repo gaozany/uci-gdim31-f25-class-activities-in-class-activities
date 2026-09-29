@@ -1,7 +1,10 @@
 # in-class-activities
 ## Devlogs
 ### W1
-Hello world!
+Gaozan Ye, he/him
+
+After I moved the camera out of the cat GameObject, the camera stopped following the cat because it was no longer a child of the cat and no longer inherited its movement.
+[itch link](https://gaozany.itch.io/gdim-31-w1-in-class-activity)
 
 ### W2
 Create future Devlog sub-headers with the three # symbols, then write your Devlogs below them.
