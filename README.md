@@ -14,7 +14,7 @@ Create future Devlog sub-headers with the three # symbols, then write your Devlo
 
 2. The bounce counter is an int because it counts whole-number events: 0, 1, 2, and so on. Each collision adds one bounce, so decimal values are unnecessary. A bool cannot store a count, and a string would store it as text instead of a number.
 
-3. After Step 4, the error “; expected” indicated that the statement was missing a semicolon. Adding it at the end fixed the syntax: `g -= 0.1f;`.
+3. After Step 4, the error “; expected” indicated that the statement was missing a semicolon. Adding it at the end fixed the syntax: g -= 0.1f;
 
 ## Open-Source Assets
 ### W1
