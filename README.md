@@ -16,6 +16,28 @@ Create future Devlog sub-headers with the three # symbols, then write your Devlo
 
 3. After Step 4, the error “; expected” indicated that the statement was missing a semicolon. Adding it at the end fixed the syntax: g -= 0.1f;
 
+### W3
+Table 17 
+### Activity1 :
+1.GetResponse
+Parameters: int friendshipLevel and bool knowsSecret.Return type: string.
+The friendship level is assumed to be a whole number, and the secret flag is either true or false. The method returns the character’s dialogue as text.
+2.SetLightDimness
+Parameter: float sanityLevel, ranging from 0 to 100.
+Return type: void.
+A float allows decimal values. The method changes the lights directly, so it does not need to return a value.
+3.DidPlayerHitBeat
+Parameter: float pressTime.
+Return type: bool.
+The input records when the player pressed the key. The method returns true for an accurate hit and false otherwise. I assume the target beat time and timing tolerance are already stored elsewhere in the game.
+
+### Activity2 :
+I would compare classes and Components to Phoenix’s fireball ability in Valorant. A class is like the blueprint for the ability, while a Component is an instance of that ability attached to Phoenix’s character GameObject. Member variables store values such as damage, radius, and duration. Methods define actions the ability can perform, such as casting the fireball. The same blueprint could create multiple ability Components with different values.
+
+### Activity3 :
+At first, I could not see any color changes with the default speed threshold of 10. I changed the threshold to 0 for testing and saw the balls become brighter. I then tried thresholds of 3 and 5 and also observed the effect. This showed me that the color changes depend on whether the ball’s average speed exceeds the threshold. When it does, each collision multiplies the current RGB color values by 1.5. The changes accumulate because the code uses the updated color each time and does not limit the values. After enough collisions, all three RGB components of my chosen colors became very high, making the balls appear extremely bright and eventually white.
+
+
 ## Open-Source Assets
 ### W1
 - Animals: https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727 
