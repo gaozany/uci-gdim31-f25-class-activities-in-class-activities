@@ -37,6 +37,13 @@ I would compare classes and Components to Phoenix’s fireball ability in Valora
 ### Activity3 :
 At first, I could not see any color changes with the default speed threshold of 10. I changed the threshold to 0 for testing and saw the balls become brighter. I then tried thresholds of 3 and 5 and also observed the effect. This showed me that the color changes depend on whether the ball’s average speed exceeds the threshold. When it does, each collision multiplies the current RGB color values by 1.5. The changes accumulate because the code uses the updated color each time and does not limit the values. After enough collisions, all three RGB components of my chosen colors became very high, making the balls appear extremely bright and eventually white.
 
+### W4 :
+Gaozan Ye, he/him
+Table 8
+
+1. We added Rigidbody components to the "cat" and the "soccer ball" because they need to move and interact with the physics system. We did not add a Rigidbody to the "goal" since it does not need to move; instead, we simply enabled the "Is Trigger" option on its Box Collider. This allows the code to detect a "goal scored" event when the soccer ball passes through the goal area. The colliders for the cat and the soccer ball were not set as triggers, as they need to engage in physical collisions with other objects.
+
+2. The game did not function as expected when first run. Because the Debug.Log statements were still commented out, no information was being output. Additionally, I had incorrectly placed the MadeGoal method inside OnTriggerEnter, which caused the code to throw errors. I moved MadeGoal outside of OnTriggerEnter and removed the comment markers. Furthermore, the soccer ball was not rolling continuously as it did in the video—it was coming to a stop too quickly—so I removed the "Freeze Rotation" constraints on its X and Z axes.
 
 ## Open-Source Assets
 ### W1

@@ -8,6 +8,14 @@ public class SoccerBall : MonoBehaviour
     [SerializeField] private TMP_Text _timeText;
     [SerializeField] private ParticleSystem _goalVFX;
 
+    private int _points = 0;
+    private float _timeSinceLastGoal = 0.0f;
+    private void Update()
+    {
+        _timeSinceLastGoal += Time.deltaTime;
+        _timeText.text = "Time since last goal: " + _timeSinceLastGoal.ToString("F1");
+    }
+
     // STEP 1 -----------------------------------------------------------------
     // The OnTriggerEnter method is a collision method called by Unity that
     //      tells our object when it's hit a collider with Is Trigger checked.
@@ -21,10 +29,7 @@ public class SoccerBall : MonoBehaviour
     //
     // Also, uncomment and FIX the Debug.Log line.
 
-    //private ?? ??
-    //{
         // finish STEP 1 by uncommenting and fixing the below line!
-        //Debug.Log(SoccerBall detected a collision with a trigger collider!);
 
         // STEP 2 -------------------------------------------------------------
         // Write an IF STATEMENT to check if the game object we collided with
@@ -34,10 +39,24 @@ public class SoccerBall : MonoBehaviour
         // Then, move your Debug.Log() statement so that it's only called if
         //      the colliding object has the "Goal" tag.
 
-
         // STEP 2 -------------------------------------------------------------
-    //}
+    private void OnTriggerEnter(Collider other)
+{
+    if (other.CompareTag("Goal"))
+    {
+        MadeGoal();
+    }
+}
 
+private void MadeGoal()
+{
+    Debug.Log("SoccerBall detected the Goal!");
+    _goalVFX.Play();
+
+    _points++;
+    _pointsText.text = "Points: " + _points;
+    _timeSinceLastGoal = 0f;
+}
     // STEP 1 -----------------------------------------------------------------
 
 
