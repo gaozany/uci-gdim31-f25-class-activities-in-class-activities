@@ -45,6 +45,15 @@ Table 8
 
 2. The game did not function as expected when first run. Because the Debug.Log statements were still commented out, no information was being output. Additionally, I had incorrectly placed the MadeGoal method inside OnTriggerEnter, which caused the code to throw errors. I moved MadeGoal outside of OnTriggerEnter and removed the comment markers. Furthermore, the soccer ball was not rolling continuously as it did in the video—it was coming to a stop too quickly—so I removed the "Freeze Rotation" constraints on its X and Z axes.
 
+### W6 :
+Table Number 8, work with Wei Chen
+
+1. I was thinking that the DeerW5 class needs a Transform variable called _target to store and keep the GameObject that the deer will walk toward. My partner and I will use [SerializeField] like the CatW5 so I can choose the target in the Unity Inspector. For this activity, I decided to use the Cat GameObject as the target.
+
+2. Me and my partner chose a plan to use the Start() method that Unity provides since we only need to set the deer's destination when the game begins, and we do not have to worry about it afterward. I did not think we needed an Update() method because the NavMeshAgent can handle the movement after receiving its destination by itself.
+
+3. When the game get started, the Start() method should use GetComponent<NavMeshAgent>() to get the NavMeshAgent Component attached to the Deer. Then, it should call SetDestination() using the Cat's position through _target.position. This will allow the deer to automatically walk toward the Cat's starting position by following the NavMesh.
+
 ## Open-Source Assets
 ### W1
 - Animals: https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727 
