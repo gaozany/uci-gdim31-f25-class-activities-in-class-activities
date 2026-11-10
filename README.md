@@ -54,6 +54,32 @@ Table Number 8, work with Wei Chen
 
 3. When the game get started, the Start() method should use GetComponent<NavMeshAgent>() to get the NavMeshAgent Component attached to the Deer. Then, it should call SetDestination() using the Cat's position through _target.position. This will allow the deer to automatically walk toward the Cat's starting position by following the NavMesh.
 
+### W7 :
+Table Number 8, work with Wei Chen
+
+#### Activity 1: Class Resource Guide
+My assigned category was Unity Coding.
+
+[Shared Google Doc](https://docs.google.com/document/d/1F78Fx8NinOQnaUd4iHZIwK7Ql3RlhhHgiyIwT_JT4_k/edit?tab=t.0)
+
+#### Activity 2: Pair Programming
+Plan for BatW6 Class
+1. Open C# script called BatW6.cs.
+2. Attach the BatW6 Component to all 10 Bat GameObjects.
+3. Add a float variable called _moveSpeed to control how fast the bats move.
+4. Use [SerializeField] so the movement speed can be changed in the Inspector.
+5. Add a Transform variable called _cat to store the Cat's position.
+6. Use Update() to make the bats move toward the Cat every frame.
+7. Calculate the direction between the bat and Cat using Vector3.
+8. Use _moveSpeed and Time.deltaTime to control the movement.
+9. Create two public methods, StartChasing() and StopChasing(), to enable and disable the chasing behavior.
+10. Use Start() to call StartChasing() for testing.
+11. Run the game and check if all the bats chase the Cat.
+
+1. The `BatW6` class needs a serialized `Transform` variable named `_playerTransform` to store the Cat's Transform, a serialized `float` named `_speed` to control movement speed, and a `bool` named `_isChasing` to record whether the bat should currently chase the Cat.
+2. The class needs Unity's `Update()` method, which runs every frame. For Part 1 testing, it also temporarily uses Unity's `Start()` method. We write two public methods named `StartChasing()` and `StopChasing()` so that `BatManager` can control each bat.
+3. `Update()` checks `_isChasing` and uses `Vector3.MoveTowards()` to move the bat toward the Cat when chasing is enabled. `StartChasing()` sets `_isChasing` to `true`, and `StopChasing()` sets it to `false`. The temporary `Start()` method calls `StartChasing()` for Part 1 testing and is removed for Part 2.
+
 ## Open-Source Assets
 ### W1
 - Animals: https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727 
