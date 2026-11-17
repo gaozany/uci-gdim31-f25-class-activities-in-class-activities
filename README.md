@@ -80,6 +80,11 @@ Plan for BatW6 Class
 2. The class needs Unity's `Update()` method, which runs every frame. For Part 1 testing, it also temporarily uses Unity's `Start()` method. We write two public methods named `StartChasing()` and `StopChasing()` so that `BatManager` can control each bat.
 3. `Update()` checks `_isChasing` and uses `Vector3.MoveTowards()` to move the bat toward the Cat when chasing is enabled. `StartChasing()` sets `_isChasing` to `true`, and `StopChasing()` sets it to `false`. The temporary `Start()` method calls `StartChasing()` for Part 1 testing and is removed for Part 2.
 
+### W8: 
+Gaozan Ye, he/him
+
+The original Step 2 used `Vector3.forward`, which always points in the same world-space direction. Because of this, the Muskrat would not move in the direction it was facing after turning. I replaced it with `transform.forward`, which uses the Muskrat’s local forward direction and allows it to move forward and backward based on its current rotation.
+
 ## Open-Source Assets
 ### W1
 - Animals: https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727 
