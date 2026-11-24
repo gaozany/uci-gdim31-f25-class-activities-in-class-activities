@@ -97,6 +97,10 @@ The various objects which could be kicked: KickableItem script, Sprite Renderer,
 I included arrows from Player to the various kickable objects to indicate the application of a force, from each object to the GameManager to indicate returning its type, and from the various objects in the Environment to indicate support of and collision with Player and other objects.
 We all then determined methods of communication between the remaining objects: Player, GameManager, UI, Environment and Kickable Items.
 
+for my final milestone1
+I opened the provided 2D Unity starter project and checked the Main scene. The scene already includes the Player, GameController, Canvas, and EventSystem. I also confirmed that the game timer is set to 30 seconds.
+I started building the environment by creating a Grid and a rectangular Tilemap. The Tilemap will be used to create the ground and platforms for the 2D platforming level. I add a Tilemap Collider 2D so the player can stand and jump on these surfaces.
+
 ## Open-Source Assets
 ### W1
 - Animals: https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727 
